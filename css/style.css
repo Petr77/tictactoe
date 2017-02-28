@@ -1,0 +1,45 @@
+body {
+    background-color: #6d572b;
+    text-align: center;
+}
+h1 {
+  font-size: 70px;
+  color: yellow;
+}
+
+.board{
+    margin: 10px auto 10px auto;
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    border: 5px solid grey;
+    border-radius: 10px;
+    padding: 0 0 0 0;
+}
+
+.board > div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgrey;
+    background-color: grey;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+:hover.square {
+  background-color: #302f2e;
+}
+
+.O {
+  font-size: 50px;
+  color: blue;
+  background-color: red !important;
+  /*background-image: url(http://fillmurray.com/100/100)*/
+}
+
+.X {
+  font-size: 50px;
+  color: red;
+  background-color: blue !important;
+
+}
