@@ -1,17 +1,17 @@
 body {
-    background-color: #6d572b;
+    background-color:  #ffa64d;
     text-align: center;
 }
 h1 {
-  font-size: 70px;
-  color: yellow;
+  font-size: 80px;
+  color: #1a1aff;
 }
 
 .board{
     margin: 10px auto 10px auto;
     width: 320px;
     height: 320px;
-    background-color: white;
+    background-color: black;
     border: 5px solid grey;
     border-radius: 10px;
     padding: 0 0 0 0;
@@ -21,7 +21,7 @@ h1 {
     width: 100px;
     height: 100px;
     border: 1px solid lightgrey;
-    background-color: grey;
+    background-color: white;
     display: inline-block;
     border-radius: 10px;
 }
@@ -33,13 +33,17 @@ h1 {
 .O {
   font-size: 50px;
   color: blue;
-  background-color: red !important;
+  /*background-color: red !important;*/
   /*background-image: url(http://fillmurray.com/100/100)*/
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ae/Red_circle.png);
+  background-size: 100px 100px;
 }
 
 .X {
   font-size: 50px;
   color: red;
-  background-color: blue !important;
-
+  /*background-color: blue !important;*/
+  background-image: url(http://www.clker.com/cliparts/Z/i/8/1/n/r/green-x-md.png);
+  background-size: 100px 100px;
+  background-color: white;
 }
