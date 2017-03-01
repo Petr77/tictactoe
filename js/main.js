@@ -11,7 +11,7 @@ window.onload = function(){
   var checkWin = function(){
 
 
-    var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,8]];
+    var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
     var winner;
     for (var i = 0; i < winningSquares.length; i++) {
       squares = winningSquares[i];
@@ -21,18 +21,9 @@ window.onload = function(){
       }
     }
     if(winner){
-      console.log("Winner is " + winner);
+      setTimeout(function(){alert("Winner is " + winner)}, 100);
     }
   };
-
-  // var makeMove = function(row, col){   //need to get a cell!!
-  //
-  //   var cells = document.getElementsByClassName('board');
-  //   for (var i = 0; i < $(.board > cells.length; i++) {
-  //     $('.board > div') = cells[i]
-  //   }
-  // };
-
 
 
   var clickSquareHandler = function(){
@@ -59,28 +50,15 @@ window.onload = function(){
   };
 
   $(".board > div").on('click', clickSquareHandler);
-};
 
-// var checkWin = function () {
-//
-//   var board = [
-//     $('#square0').attr('class'),
-//     $('#square1').attr('class'),
-//     $('#square2').attr('class'),
-//     $('#square3').attr('class'),
-//     $('#square4').attr('class'),
-//     $('#square5').attr('class'),
-//     $('#square6').attr('class'),
-//     $('#square7').attr('class'),
-//     $('#square8').attr('class'),
-//   ];
-//
-//   var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,8]];
-//
-//   for (var i = 0; i < winningSquares.length; i++) {
-//     squares = winningSquares[i];
-//     if( board[squares[0]] === board[squares[1]] && board[squares[1]] === board[squares[2]] ){
-//       winner = board[squares[0]];
-//       debugger
-//     }
-//   }
+
+     //need remove class and set board to null!!
+  var resetButton = function() {
+    $('.board > div').removeClass("X O");
+    //need to reset board to null!!!!
+    board = [null,null,null,null,null,null,null,null,null];
+  };
+
+  $('#reset').on('click', resetButton);
+  
+};
