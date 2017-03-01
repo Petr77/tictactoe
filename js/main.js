@@ -5,11 +5,11 @@ window.onload = function(){
 
   var currentPlayer = 'X';
 
+  var board = [null,null,null,null,null,null,null,null,null];
 
 
   var checkWin = function(){
 
-    var board = ['X','X','X','O','O','O','X','O','X'];
 
     var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,8]];
     var winner;
@@ -25,6 +25,15 @@ window.onload = function(){
     }
   };
 
+  // var makeMove = function(row, col){   //need to get a cell!!
+  //
+  //   var cells = document.getElementsByClassName('board');
+  //   for (var i = 0; i < $(.board > cells.length; i++) {
+  //     $('.board > div') = cells[i]
+  //   }
+  // };
+
+
 
   var clickSquareHandler = function(){
 
@@ -34,6 +43,10 @@ window.onload = function(){
     }
 
     $(this).addClass( currentPlayer )   //html( currentPlayer );
+
+    var id = parseInt( $(this).attr('id') );
+
+    board[id] = currentPlayer;
 
     checkWin();
 
