@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function(){
 
   var turns = 0;
 
@@ -10,26 +10,49 @@ window.onload = function(){
 
   var windowAlert = function (message) {
     $('.alert').html(message);
-  }
+  };
+
+  var playerX = 0;
+
+  var playerO = 0;
 
   var checkWin = function(){
 
-
+    // winning combinations
     var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
     var winner;
     for (var i = 0; i < winningSquares.length; i++) {
       squares = winningSquares[i];
       if( board[squares[0]] !== null
-      && board[squares[0]] === board[squares[1]] && board[squares[1]] === board[squares[2]] ){
+          && board[squares[0]] === board[squares[1]]
+          && board[squares[1]] === board[squares[2]] ){
+
           winner = board[squares[0]];
       }
     }
     if(winner){
-      setTimeout(function(){windowAlert("Winner is " + winner)}, 100);
-    } else if(turns >= 8 ){
-    windowAlert("Draw")
+      updateWinCount(winner);
+      setTimeout(function(){
+        windowAlert("Winner is " + winner);
+      }, 100);
+    }else if(turns >= 8 ){
+      windowAlert("Draw!")
     }
+    return winner;
   };
+
+  var updateWinCount = function(winner){
+    // debugger;
+    if (winner == "O") {
+      playerO++;
+      $('.playerO').html( playerO );
+      // $('.playerO').
+    } else {
+      playerX++;
+      $('.playerO').html( playerO );
+      // $('.playerX').
+    }
+  }
 
   var clickSquareHandler = function(){
 
@@ -75,5 +98,4 @@ window.onload = function(){
 
   $('#reset').on('click', resetButton);
 
-
-};
+});

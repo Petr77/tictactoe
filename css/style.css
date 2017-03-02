@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Nosifer|Press+Start+2P|Sigmar+One');
+
 body {
     background: linear-gradient(to right, #e67300 0%, #7db9e8 100%);
     text-align: center;
 }
+
 h1 {
   font-size: 80px;
   color: #1a1aff;
   font-family: 'Nosifer', cursive;
   text-shadow: 5px 10px 5px black;
   text-decoration: overline;
-
-
 }
 
-.board{
+.board {
     margin: 10px auto 10px auto;
     width: 320px;
     height: 321px;
@@ -21,6 +21,7 @@ h1 {
     border: 5px solid #1a1aff;
     border-radius: 10px;
     padding: 0;
+    display: inline-block;
 }
 
 .board > div {
@@ -42,7 +43,7 @@ h1 {
   color: blue;
   /*background-color: red !important;*/
   /*background-image: url(http://fillmurray.com/100/100)*/
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ae/Red_circle.png);
+  background-image: url(http://rs190.pbsrc.com/albums/z301/daryldsouza/eye_of_sauron.gif~c200);
   background-size: 100px 100px;
 }
 
@@ -50,7 +51,7 @@ h1 {
   font-size: 50px;
   color: red;
   /*background-color: blue !important;*/
-  background-image: url(http://www.clker.com/cliparts/Z/i/8/1/n/r/green-x-md.png);
+  background-image: url(https://media.giphy.com/media/XlTFR0l6w7gD6/giphy.gif);
   background-size: 100px 100px;
   background-color: white;
 }
@@ -58,12 +59,12 @@ h1 {
 #reset {
   height: 35px;
   width: 70px;
-  background-color: yellow;
-  color: black;
+  background-color: #663300;
+  color: white;
   border-radius: 10px;
   font-family: 'Sigmar One', cursive;
-
 }
+
 .alert {
   height: 40px;
   width: 300px;
@@ -76,4 +77,33 @@ h1 {
   color: red;
   font-family: 'Press Start 2P', cursive;
   padding-top: 10px;
+}
+footer {
+  font-size: 15px;
+  color: red;
+  padding-top: 10px;
+}
+
+.playerO {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  display: inline-block;
+  float: left;
+  margin-left: 16%;
+  margin-top: 8%;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.playerX {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  display: inline-block;
+  float: right;
+  margin-right: 16%;
+  margin-top: 8%;
+  border-radius: 10px;
+  border: 3px solid white;
 }
