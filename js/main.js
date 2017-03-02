@@ -1,12 +1,16 @@
 window.onload = function(){
-  var playerX = "X";
-  var playerO = "O";
-  var turns = 0;           // the game is only 9 turns long!!!!
+
+  var turns = 0;
 
   var currentPlayer = 'X';
 
+  var lastGameStart = currentPlayer;
+
   var board = [null,null,null,null,null,null,null,null,null];
 
+  var windowAlert = function (message) {
+    $('.alert').html(message);
+  }
 
   var checkWin = function(){
 
@@ -21,10 +25,11 @@ window.onload = function(){
       }
     }
     if(winner){
-      setTimeout(function(){alert("Winner is " + winner)}, 100);
+      setTimeout(function(){windowAlert("Winner is " + winner)}, 100);
+    } else if(turns >= 8 ){
+    windowAlert("Draw")
     }
   };
-
 
   var clickSquareHandler = function(){
 
@@ -46,19 +51,29 @@ window.onload = function(){
     } else {
       currentPlayer = 'X';
     }
-
+    turns++;
   };
 
   $(".board > div").on('click', clickSquareHandler);
 
 
-     //need remove class and set board to null!!
+     //need remove class!!!
   var resetButton = function() {
     $('.board > div').removeClass("X O");
     //need to reset board to null!!!!
     board = [null,null,null,null,null,null,null,null,null];
+    turns = 0;
+
+    if( lastGameStart === 'X' ){
+      currentPlayer = 'O';
+    } else {
+      currentPlayer = 'X';
+    }
+    lastGameStart = currentPlayer;
+    windowAlert("");
   };
 
   $('#reset').on('click', resetButton);
-  
+
+
 };
