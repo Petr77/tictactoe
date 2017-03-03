@@ -22,6 +22,7 @@ h1 {
     border-radius: 10px;
     padding: 0;
     display: inline-block;
+    box-shadow: 5px 10px 5px black;
 }
 
 .board > div {
@@ -41,19 +42,18 @@ h1 {
 .O {
   font-size: 50px;
   color: blue;
-  /*background-color: red !important;*/
-  /*background-image: url(http://fillmurray.com/100/100)*/
   background-image: url(http://rs190.pbsrc.com/albums/z301/daryldsouza/eye_of_sauron.gif~c200);
   background-size: 100px 100px;
+
 }
 
 .X {
   font-size: 50px;
   color: red;
-  /*background-color: blue !important;*/
   background-image: url(https://media.giphy.com/media/XlTFR0l6w7gD6/giphy.gif);
   background-size: 100px 100px;
   background-color: white;
+
 }
 
 #reset {
@@ -63,6 +63,7 @@ h1 {
   color: white;
   border-radius: 10px;
   font-family: 'Sigmar One', cursive;
+  box-shadow: 5px 10px 5px black;
 }
 
 .alert {
@@ -77,6 +78,7 @@ h1 {
   color: red;
   font-family: 'Press Start 2P', cursive;
   padding-top: 10px;
+  box-shadow: 5px 10px 5px black;
 }
 footer {
   font-size: 15px;
@@ -94,6 +96,16 @@ footer {
   margin-top: 8%;
   border-radius: 10px;
   border: 3px solid white;
+  text-align: middle;
+  vertical-align: middle;
+  line-height: 100px;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px black;
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url(http://rs190.pbsrc.com/albums/z301/daryldsouza/eye_of_sauron.gif~c200);
+  background-size: 100px 100px;
+  box-shadow: 5px 10px 5px black;
 }
 
 .playerX {
@@ -106,4 +118,14 @@ footer {
   margin-top: 8%;
   border-radius: 10px;
   border: 3px solid white;
+  text-align: middle;
+  vertical-align: middle;
+  line-height: 100px;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px yellow;
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url(https://media.giphy.com/media/XlTFR0l6w7gD6/giphy.gif);
+  background-size: 100px 100px;
+  box-shadow: 5px 10px 5px black;
 }

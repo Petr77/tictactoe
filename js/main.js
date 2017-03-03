@@ -2,25 +2,26 @@ $(document).ready(function(){
 
   var turns = 0;
 
+  var winner;
+
   var currentPlayer = 'X';
 
   var lastGameStart = currentPlayer;
-
-  var board = [null,null,null,null,null,null,null,null,null];
-
-  var windowAlert = function (message) {
-    $('.alert').html(message);
-  };
 
   var playerX = 0;
 
   var playerO = 0;
 
+  var board = [null,null,null,null,null,null,null,null,null];
+  //window board to display who won or game is draw. need to be reset after each game!
+  var windowAlert = function (message) {
+    $('.alert').html(message);
+  };
+
   var checkWin = function(){
 
     // winning combinations
     var winningSquares = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-    var winner;
     for (var i = 0; i < winningSquares.length; i++) {
       squares = winningSquares[i];
       if( board[squares[0]] !== null
@@ -36,35 +37,33 @@ $(document).ready(function(){
         windowAlert("Winner is " + winner);
       }, 100);
     }else if(turns >= 8 ){
-      windowAlert("Draw!")
+        windowAlert("Draw!")
     }
     return winner;
   };
 
   var updateWinCount = function(winner){
-    // debugger;
+
     if (winner == "O") {
       playerO++;
       $('.playerO').html( playerO );
-      // $('.playerO').
     } else {
       playerX++;
-      $('.playerO').html( playerO );
-      // $('.playerX').
+      $('.playerX').html( playerX );
     }
   }
 
   var clickSquareHandler = function(){
 
      //to check if square is already taken!
-    if( $(this).hasClass('X') || $(this).hasClass('O') ){
+    if( winner || $(this).hasClass('X') || $(this).hasClass('O') ){
       return;
     }
-
+    //adding a class to each square!
     $(this).addClass( currentPlayer )   //html( currentPlayer );
-
+    // getting an id of each square
     var id = parseInt( $(this).attr('id') );
-
+    //assigning and id to clicked square
     board[id] = currentPlayer;
 
     checkWin();
@@ -86,7 +85,8 @@ $(document).ready(function(){
     //need to reset board to null!!!!
     board = [null,null,null,null,null,null,null,null,null];
     turns = 0;
-
+    winner = false;
+    //to change player after each game
     if( lastGameStart === 'X' ){
       currentPlayer = 'O';
     } else {
