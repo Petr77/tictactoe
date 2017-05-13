@@ -13,7 +13,7 @@ $(document).ready(function(){
   var playerO = 0;
 
   var board = [null,null,null,null,null,null,null,null,null];
-  //window board to display who won or game is draw. need to be reset after each game!
+
   var windowAlert = function (message) {
     $('.alert').html(message);
   };
@@ -29,6 +29,7 @@ $(document).ready(function(){
           && board[squares[1]] === board[squares[2]] ){
 
           winner = board[squares[0]];
+          break;
       }
     }
     if(winner){
@@ -67,7 +68,7 @@ $(document).ready(function(){
     board[id] = currentPlayer;
 
     checkWin();
-
+    // to switch between playerX and playerO
     if( currentPlayer === 'X' ){
       currentPlayer = 'O';
     } else {
@@ -79,7 +80,7 @@ $(document).ready(function(){
   $(".board > div").on('click', clickSquareHandler);
 
 
-     //need remove class!!!
+
   var resetButton = function() {
     $('.board > div').removeClass("X O");
     //need to reset board to null!!!!

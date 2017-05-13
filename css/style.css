@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   color: #1a1aff;
   font-family: 'Nosifer', cursive;
   text-shadow: 5px 10px 5px black;
@@ -87,8 +87,8 @@ footer {
 }
 
 .playerO {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background-color: black;
   display: inline-block;
   float: left;
@@ -99,18 +99,18 @@ footer {
   text-align: middle;
   vertical-align: middle;
   line-height: 100px;
-  font-size: 50px;
+  font-size: 100px;
+  text
   text-shadow: 3px 3px 3px black;
   color: red;
   font-family: 'Press Start 2P', cursive;
   background-image: url(http://rs190.pbsrc.com/albums/z301/daryldsouza/eye_of_sauron.gif~c200);
-  background-size: 100px 100px;
-  box-shadow: 5px 10px 5px black;
+
 }
 
 .playerX {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background-color: black;
   display: inline-block;
   float: right;
@@ -121,11 +121,11 @@ footer {
   text-align: middle;
   vertical-align: middle;
   line-height: 100px;
-  font-size: 50px;
+  font-size: 100px;
   text-shadow: 3px 3px 3px yellow;
+  text-align: center;
   color: red;
   font-family: 'Press Start 2P', cursive;
   background-image: url(https://media.giphy.com/media/XlTFR0l6w7gD6/giphy.gif);
-  background-size: 100px 100px;
-  box-shadow: 5px 10px 5px black;
+  background-position: center;
 }
