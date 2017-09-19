@@ -75,6 +75,7 @@ $(document).ready(function(){
       currentPlayer = 'X';
     }
     turns++;
+    $('.currentPlayer').html("It's player: " + currentPlayer + " turn!"  );
   };
 
   $(".board > div").on('click', clickSquareHandler);
@@ -98,5 +99,7 @@ $(document).ready(function(){
   };
 
   $('#reset').on('click', resetButton);
+
+  $('.currentPlayer').html("It's player: " + currentPlayer + " turn!"  );
 
 });
